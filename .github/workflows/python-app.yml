@@ -78,7 +78,7 @@ jobs:
       run: |
         ssh deploy_ec2 "mkdir temp/"
         ssh deploy_ec2 "git clone git@github.com:cbagusjk/smoke_detector.git temp/"
-        ssh deploy_ec2 "rsync -a ./temp ./ml_process_demo"
+        ssh deploy_ec2 "rsync -a ./temp/* ./ml_process_demo/"
         ssh deploy_ec2 "rm -rf temp/"
         ssh deploy_ec2 "cd ml_process_demo && git lfs pull"
         ssh deploy_ec2 "cd ml_process_demo && sudo docker compose rm -s api && sudo docker compose rm -s streamlit"
