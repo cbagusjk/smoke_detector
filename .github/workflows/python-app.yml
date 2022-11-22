@@ -13,18 +13,18 @@ permissions:
   contents: read
 
 jobs:
-#   docker-compose-build:
+  docker-compose-build:
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v3
-#       with:
-#         lfs: True
-#     - name: Set up Python 3.10
-#       uses: actions/setup-python@v3
-#       with:
-#         python-version: "3.10"
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: True
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
         
 #     - name: Install dependencies
 #       run: |
