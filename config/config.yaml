@@ -1,0 +1,108 @@
+# Path related
+dataset_path: data/raw/smoke_detection_iot.csv
+dataset_cleaned_path: data/processed/raw_dataset.pkl
+train_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+valid_set_path:
+- data/processed/x_valid.pkl
+- data/processed/y_valid.pkl
+test_set_path:
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+train_feng_set_path:
+- data/processed/x_train_feng.pkl
+- data/processed/y_train_feng.pkl
+valid_feng_set_path:
+- data/processed/x_valid_feng.pkl
+- data/processed/y_valid_feng.pkl
+test_feng_set_path:
+- data/processed/x_test_feng.pkl
+- data/processed/y_test_feng.pkl
+production_model_path: models/production_model.pkl
+ohe_stasiun_path: models/ohe_stasiun.pkl
+le_encoder_path: models/le_encoder.pkl
+training_log_path: log/training_log.json
+
+# Debug related
+print_debug: true
+
+# Columns by data type related
+datetime_columns:
+- UTC
+float_columns:
+- Temperature[C]
+- Humidity[%]
+- Pressure[hPa]
+- PM1.0
+- PM2.5
+- NC0.5
+- NC1.0
+- NC2.5
+int_columns:
+- TVOC[ppb]
+- eCO2[ppm]
+- Raw H2
+- Raw Ethanol
+- CNT
+- Fire Alarm
+
+# Predictors and label related
+label: Fire Alarm
+predictors:
+- Temperature[C]
+- Humidity[%]
+- Pressure[hPa]
+- PM1.0
+- TVOC[ppb]
+- eCO2[ppm]
+- Raw H2
+- Raw Ethanol
+
+# Range of data related
+utc:
+- 8/6/2022
+- 14/6/2022
+range_temperature:
+- -40
+- 125
+range_humidity:
+- 0
+- 100
+range_pressure:
+- 300
+- 1250
+range_pm1:
+- 0
+- 65535
+range_pm25:
+- 0
+- 65535
+range_nc05:
+- 0
+- 65535
+range_nc1:
+- 0
+- 65535
+range_nc25:
+- 0
+- 65535
+range_tvoc:
+- 0
+- 60000
+range_eco2:
+- 400
+- 60000
+range_raw_h2:
+- 0
+- 60000
+range_raw_ethanol:
+- 0
+- 60000
+range_fire_alarm:
+- 0
+- 1
+
+# Splitting related
+test_size: 0.3
+valid_size: 0.5
