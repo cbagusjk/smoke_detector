@@ -41,8 +41,6 @@ def predict(data: api_data):
         axis = 1
     )
 
-    utils.pickle_dump(data, "data.pkl")
-
     # Check range data
     try:
         data_pipeline.check_data(data, config, True)  # type: ignore
