@@ -50,12 +50,10 @@ int_columns:
 # Predictors and label related
 label: Fire Alarm
 predictors:
-- Temperature[C]
 - Humidity[%]
 - Pressure[hPa]
 - PM1.0
 - TVOC[ppb]
-- eCO2[ppm]
 - Raw H2
 - Raw Ethanol
 
